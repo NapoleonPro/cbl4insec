@@ -6,7 +6,7 @@ def choose_prime():
     primes = [101,103,107,109,113,127,131,137,139,149]
     return random.choice(primes)
 
-HOST = '127.0.0.1'   # localhost
+HOST = '0.0.0.0'   # localhost
 PORT = 9999
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
