@@ -90,7 +90,7 @@ def rsa_decrypt_block(ciphertext, d, n):
     return pow(ciphertext, d, n)
 
 # Setup server socket
-HOST = '0.0.0.0'
+HOST = '127.0.0.1'
 PORT = 9999
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
