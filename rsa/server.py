@@ -4,7 +4,7 @@ import random
 from math import gcd
 
 def choose_prime_pq():
-    """Daftar bilangan prima untuk p dan q - dari laporan"""
+    
     primes_pq = [
 
         179, 181, 191, 193, 197, 199, 211, 223, 227, 229,
@@ -24,7 +24,7 @@ def choose_prime_pq():
     return random.choice(primes_pq)
 
 def choose_e_from_list(phi):
-    """Pilih e dari daftar bilangan prima untuk e - dari laporan"""
+    
     primes_e = [
         1019, 1021, 1031, 1033, 1039, 1049, 1051, 1061, 1063, 1069,
         1087, 1091, 1093, 1097, 1103, 1109, 1117, 1123, 1129, 1151,
@@ -54,7 +54,7 @@ def choose_e_from_list(phi):
     return random.choice(valid_e)
 
 def generate_keypair():
-    """Generate RSA keypair menggunakan daftar prima dari laporan"""
+    
     p = choose_prime_pq()
     q = choose_prime_pq()
     while p == q:
@@ -68,10 +68,7 @@ def generate_keypair():
     return (e, d, n, p, q)
 
 def blocks_to_string(blocks):
-    """
-    Convert blocks of 6-digit numbers back to string
-    Harus mirror dari string_to_blocks() di client
-    """
+    
     combined = ''.join(str(block).zfill(6) for block in blocks)
     
     result = ''

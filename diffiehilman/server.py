@@ -3,7 +3,7 @@ import socket
 import random
 
 def choose_prime():
-    """Memilih bilangan prima dari daftar yang tersedia"""
+    
     primes = [
         2371, 2377, 2381, 2383, 2389, 2393, 2399, 2411, 2417, 2423,
         2437, 2441, 2447, 2459, 2467, 2473, 2477, 2503, 2521, 2531,

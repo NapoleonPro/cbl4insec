@@ -1,14 +1,8 @@
-
 # client.py
 import socket
 
 def string_to_blocks(text, block_size=6):
-    """
-    Convert string to blocks of 6-digit numbers
-    Sesuai dengan laporan: 
-    - Convert setiap karakter ke ASCII (3 digit dengan leading zero)
-    - Gabungkan dan pecah jadi blok 6 digit
-    """
+
     # Convert setiap karakter ke ASCII 3 digit
     ascii_codes = [str(ord(char)).zfill(3) for char in text]
     
@@ -26,7 +20,7 @@ def string_to_blocks(text, block_size=6):
     return blocks
 
 def rsa_encrypt_block(plaintext, e, n):
-    """Encrypt single block"""
+    
     return pow(plaintext, e, n)
 
 HOST = '127.0.0.1'
