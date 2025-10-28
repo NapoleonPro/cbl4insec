@@ -51,9 +51,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     ciphertext_blocks = []
     print("[CLIENT] Enkripsi per blok:")
     for i, plain_block in enumerate(plaintext_blocks):
-        if plain_block >= n:
-            print(f"  WARNING: Blok {i+1} ({plain_block}) >= n ({n})")
-            print(f"  Gunakan p dan q yang lebih besar!")
         cipher_block = rsa_encrypt_block(plain_block, e, n)
         ciphertext_blocks.append(cipher_block)
         print(f"  Blok {i+1}: {plain_block} -> {cipher_block}")
